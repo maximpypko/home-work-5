@@ -1,15 +1,17 @@
 function padString(string = '', number, symbol, addSimbol = true) {
 
+    var result = string;
+    
     if (string.length <= number) {
-        for (var j = 1; j = number - string.length; j++) {
+        for (var j = 1; j = number - result.length; j++) {
             if (addSimbol) {
-                string = symbol + string;
+                result = symbol[0] + result;
             } else {
-                string = string + symbol;
+                result = result + symbol[0];
             }
         }
     }
-    return string;
+    return result;
 }
 
 console.log(padString('Ivan', 8, '*', true))
